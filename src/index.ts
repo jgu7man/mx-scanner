@@ -1,1 +1,1 @@
-export * from './lib/scanner.module';
+export * from './lib/mx-scanner.module';
