@@ -1,0 +1,34 @@
+{
+  "projectType": "library",
+  "root": "libs/marxa/scanner",
+  "sourceRoot": "libs/marxa/scanner/src",
+  "prefix": "mx",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:package",
+      "outputs": ["dist/libs/marxa/scanner"],
+      "options": {
+        "project": "libs/marxa/scanner/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/marxa/scanner/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/marxa/scanner/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/marxa/scanner/src/**/*.ts",
+          "libs/marxa/scanner/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
