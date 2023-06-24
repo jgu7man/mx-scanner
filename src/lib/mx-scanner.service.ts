@@ -1,9 +1,9 @@
-import { MxAlert } from '@marxa/devkit';
 import { Injectable } from '@angular/core';
-import { Observable, Subject } from 'rxjs';
+import { MxAlert } from '@marxa-digital/devkit';
+import { Subject } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class MxScanner {
   codeScanned$: Subject<any> = new Subject();

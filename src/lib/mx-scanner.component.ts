@@ -1,27 +1,25 @@
-import { MxScanner } from './mx-scanner.service';
 import {
   AfterViewInit,
   Component,
   ElementRef,
   EventEmitter,
   Input,
+  OnDestroy,
   OnInit,
   Output,
-  ViewChild,
-  ViewChildren,
-  OnDestroy,
+  ViewChild
 } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { MxLoading, MxResponsive } from '@marxa/devkit';
+import { MxLoading, MxResponsive } from '@marxa-digital/devkit';
 import { ZXingScannerComponent } from '@zxing/ngx-scanner';
-import { debounceTime } from 'rxjs/operators';
-import { Subscription } from 'rxjs';
 import { QrScannerComponent } from 'angular2-qrscanner';
+import { Subscription } from 'rxjs';
+import { debounceTime } from 'rxjs/operators';
+import { MxScanner } from './mx-scanner.service';
 
 @Component({
   selector: 'mx-scanner',
   templateUrl: './mx-scanner.component.html',
-  styleUrls: ['./mx-scanner.component.scss'],
+  styleUrls: ['./mx-scanner.component.scss']
 })
 export class MxScannerComponent implements OnInit, AfterViewInit, OnDestroy {
   @Output() scanned: EventEmitter<any> = new EventEmitter();
